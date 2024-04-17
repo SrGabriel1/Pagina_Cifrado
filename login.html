@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <form id="login-form">
+          <input type="text" id="username" placeholder="Usuario" required>
+          <input type="password" id="password" placeholder="Contraseña" required>
+          <button type="submit" id="crear-cuenta">Iniciar sesión</button> <!-- Botón para iniciar sesión -->
+        </form>
+        <p>No tienes cuenta? <a href="CrearCuenta.html" id="crear-cuenta">Crear cuenta</a></p>
+      </div>
+  <script src="js/index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginForm = document.getElementById('login-form');
+      const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+
+      // Añadimos un evento al formulario para validar campos antes de enviar
+      loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Evita el envío automático del formulario
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        if (username === '' || password === '') {
+          swal("Error", "Por favor, completa todos los campos.", "error");
+        } else {
+          // Redirige a la página deseada después de iniciar sesión
+          window.location.href = 'index.html'; // Cambia 'index.html' por la ruta correcta
+        }
+      });
+    });
+  </script>
+</body>
+</html>
