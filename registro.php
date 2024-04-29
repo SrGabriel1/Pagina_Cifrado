@@ -29,7 +29,7 @@
         </div>
 
         <input class="btn" type="submit" name="register" value = "Enviar">
-
+        <p>Ya tienes cuenta? <a href="login.php" id="crear-cuenta">Log in</a></p>
         </form>
         <?php
             include("register.php");
