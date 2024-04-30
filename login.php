@@ -19,7 +19,7 @@
         <?php
             include("inicio.php");
         ?>
-        <p>No tienes cuenta? <a href="index.php" id="crear-cuenta">Crear cuenta</a></p>
+        <p>No tienes cuenta? <a href="registro.php" id="crear-cuenta">Crear cuenta</a></p>
       </div>
       
   
